@@ -1,22 +1,27 @@
 <!doctype html>
-<html lang="id">
+<html>
 <head>
 <meta charset="utf-8">
 <title>Untitled Page</title>
-<meta name="description" content="percetakan UV digital printing dan periklanan digital">
-<meta name="generator" content="WYSIWYG Web Builder 19 - https://www.wysiwygwebbuilder.com">
+<meta name="description" content="AIYUVI solusi percetakan UV dan digital advertising berkualitas tinggi. Kami menghadirkan layanan terdepan dalam mencetak dengan teknologi UV yang inovatif, menghasilkan cetakan yang tahan lama dan berkualitas tinggi untuk berbagai kebutuhan Anda.">
+<meta name="keywords" content="cetak uv, print surabaya, uv murah, cetak a3 surabaya">
+<meta name="robots" content="noindex, nofollow">
+<meta name="generator" content="Wordpress">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="cosmo/jquery-ui.min.css" rel="stylesheet">
+<link href="aiyuvi.ico" rel="shortcut icon" type="image/x-icon">
+<link href="bootstrap/jquery-ui.min.css" rel="stylesheet">
 <link href="fontawesome6.min.css" rel="stylesheet">
-<link href="Untitled3.css" rel="stylesheet">
+<link href="2024-03-15.css" rel="stylesheet">
 <link href="index.css" rel="stylesheet">
 <script src="jquery-3.7.1.min.js"></script>
 <script src="jquery-ui.min.js"></script>
 <script src="popper.min.js"></script>
 <script src="bootstrap.min.js"></script>
+<script src="wwb19.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function(event)
 {
+   var testimonialsCarousel = new bootstrap.Carousel('#testimonialsCarousel', {interval: 3000, pause: false});
    var faqAccordion_items = document.querySelectorAll('#faqAccordion .accordion-collapse');
    faqAccordion_items.forEach(item => 
    {
@@ -31,32 +36,271 @@ document.addEventListener('DOMContentLoaded', function(event)
          accordionItem.classList.remove('active');
       });
    });
-   var testimonialsCarousel = new bootstrap.Carousel('#testimonialsCarousel', {interval: 3000, pause: false});
 });
 </script>
 <script>
 $(document).ready(function()
 {
-   $("#homeButton1").button({});
-   $("a[href*='#faqLayoutGrid2']").click(function(event)
+   $('#homeButton1').addClass('visibility-hidden');
+   $('#wb_servicesCard4').addClass('visibility-hidden');
+   $('#wb_servicesCard5').addClass('visibility-hidden');
+   $('#wb_servicesCard6').addClass('visibility-hidden');
+   $('#wb_Card2').addClass('visibility-hidden');
+   $('#wb_Card4').addClass('visibility-hidden');
+   $('#wb_Card5').addClass('visibility-hidden');
+   $('#wb_Card6').addClass('visibility-hidden');
+   $('#wb_Card1').addClass('visibility-hidden');
+   $('#wb_Card3').addClass('visibility-hidden');
+   $("#homeButton1").button({icon: 'ui-primary', iconPosition: 'beginning'});
+   function onScrollhomeButton1()
    {
-      event.preventDefault();
-      $('html, body').stop().animate({ scrollTop: $('#wb_faqLayoutGrid2').offset().top }, 600, 'easeOutCirc');
+      var $obj = $("#homeButton1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('homeButton1', 'slide-up-in', 0, 1250);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('homeButton1', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#homeButton1').inViewPort(true))
+   {
+      $('#homeButton1').addClass("in-viewport");
+   }
+   onScrollhomeButton1();
+   $(window).scroll(function(event)
+   {
+      onScrollhomeButton1();
    });
    $("a[href*='#productsLayoutGrid']").click(function(event)
    {
       event.preventDefault();
       $('html, body').stop().animate({ scrollTop: $('#wb_productsLayoutGrid').offset().top }, 600, 'easeOutExpo');
    });
-   $("a[href*='#servicesLayoutGrid1']").click(function(event)
+   function onScrollservicesCard4()
    {
-      event.preventDefault();
-      $('html, body').stop().animate({ scrollTop: $('#wb_servicesLayoutGrid1').offset().top-88 }, 600, 'easeOutCirc');
+      var $obj = $("#wb_servicesCard4");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_servicesCard4', 'slide-up-in', 0, 1250);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('wb_servicesCard4', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#wb_servicesCard4').inViewPort(true))
+   {
+      $('#wb_servicesCard4').addClass("in-viewport");
+   }
+   onScrollservicesCard4();
+   $(window).scroll(function(event)
+   {
+      onScrollservicesCard4();
    });
-   $("a[href*='#servicesLayoutGrid2']").click(function(event)
+   function onScrollservicesCard5()
+   {
+      var $obj = $("#wb_servicesCard5");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_servicesCard5', 'slide-down-in', 0, 1250);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('wb_servicesCard5', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#wb_servicesCard5').inViewPort(true))
+   {
+      $('#wb_servicesCard5').addClass("in-viewport");
+   }
+   onScrollservicesCard5();
+   $(window).scroll(function(event)
+   {
+      onScrollservicesCard5();
+   });
+   function onScrollservicesCard6()
+   {
+      var $obj = $("#wb_servicesCard6");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_servicesCard6', 'slide-up-in', 0, 1250);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('wb_servicesCard6', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#wb_servicesCard6').inViewPort(true))
+   {
+      $('#wb_servicesCard6').addClass("in-viewport");
+   }
+   onScrollservicesCard6();
+   $(window).scroll(function(event)
+   {
+      onScrollservicesCard6();
+   });
+   $("a[href*='#faqLayoutGrid2']").click(function(event)
    {
       event.preventDefault();
-      $('html, body').stop().animate({ scrollTop: $('#wb_servicesLayoutGrid2').offset().top-88 }, 600, 'easeOutCirc');
+      $('html, body').stop().animate({ scrollTop: $('#wb_faqLayoutGrid2').offset().top }, 600, 'easeOutCirc');
+   });
+   function onScrollCard2()
+   {
+      var $obj = $("#wb_Card2");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_Card2', 'slide-down-in', 0, 1250);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('wb_Card2', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#wb_Card2').inViewPort(true))
+   {
+      $('#wb_Card2').addClass("in-viewport");
+   }
+   onScrollCard2();
+   $(window).scroll(function(event)
+   {
+      onScrollCard2();
+   });
+   function onScrollCard4()
+   {
+      var $obj = $("#wb_Card4");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_Card4', 'slide-down-in', 0, 1250);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('wb_Card4', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#wb_Card4').inViewPort(true))
+   {
+      $('#wb_Card4').addClass("in-viewport");
+   }
+   onScrollCard4();
+   $(window).scroll(function(event)
+   {
+      onScrollCard4();
+   });
+   function onScrollCard5()
+   {
+      var $obj = $("#wb_Card5");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_Card5', 'slide-up-in', 0, 1250);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('wb_Card5', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#wb_Card5').inViewPort(true))
+   {
+      $('#wb_Card5').addClass("in-viewport");
+   }
+   onScrollCard5();
+   $(window).scroll(function(event)
+   {
+      onScrollCard5();
+   });
+   function onScrollCard6()
+   {
+      var $obj = $("#wb_Card6");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_Card6', 'slide-down-in', 0, 1250);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('wb_Card6', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#wb_Card6').inViewPort(true))
+   {
+      $('#wb_Card6').addClass("in-viewport");
+   }
+   onScrollCard6();
+   $(window).scroll(function(event)
+   {
+      onScrollCard6();
+   });
+   function onScrollCard1()
+   {
+      var $obj = $("#wb_Card1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_Card1', 'slide-down-in', 0, 1250);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('wb_Card1', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#wb_Card1').inViewPort(true))
+   {
+      $('#wb_Card1').addClass("in-viewport");
+   }
+   onScrollCard1();
+   $(window).scroll(function(event)
+   {
+      onScrollCard1();
+   });
+   function onScrollCard3()
+   {
+      var $obj = $("#wb_Card3");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_Card3', 'slide-up-in', 0, 1250);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('wb_Card3', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#wb_Card3').inViewPort(true))
+   {
+      $('#wb_Card3').addClass("in-viewport");
+   }
+   onScrollCard3();
+   $(window).scroll(function(event)
+   {
+      onScrollCard3();
    });
 });
 </script>
@@ -65,13 +309,13 @@ $(document).ready(function()
 <div id="wb_navigationLayoutGrid" class="wb-theme-header">
 <section id="navigationLayoutGrid">
 <div class="col-1">
-<div id="wb_navigationHeading" style="display:block;width:100%;z-index:0;">
-<h1 id="navigationHeading" class="wb-theme-header">Ai.Yuvi</h1>
+<div id="wb_Image1" style="display:block;width:100%;height:auto;z-index:0;">
+<a href="./index.html"><img src="images/aiyuvi-logo-kecil.png" id="Image1" alt="" width="210" height="38"></a>
 </div>
 </div>
 <div class="col-2">
 <div id="wb_navigationMenu" style="display:block;width:100%;z-index:1;" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
-<span class="wb-theme-content" itemprop="name"><a href="#homeLayoutGrid" title="Home" itemprop="url">Home</a></span><span class="wb-theme-content" itemprop="name"><a href="#contactLayoutGrid" title="Contact" itemprop="url">Contact</a></span><span class="wb-theme-content" itemprop="name"><a href="#faqLayoutGrid2" title="FAQ" itemprop="url">FAQ</a></span><span class="wb-theme-content" itemprop="name"><a href="#productsLayoutGrid" title="Products" itemprop="url">Products</a></span><span class="wb-theme-content" itemprop="name"><a href="#servicesLayoutGrid1" title="Services" itemprop="url">Services</a></span><span class="wb-theme-content" itemprop="name"><a href="#testimonialsLayoutGrid" title="Testimonials" itemprop="url">Testimonials</a></span>
+<span class="wb-theme-content" itemprop="name"><a href="#navigationLayoutGrid" title="Beranda" itemprop="url">Beranda</a></span><span class="wb-theme-content" itemprop="name"><a href="#LayoutGrid2" title="Produk" itemprop="url">Produk</a></span><span class="wb-theme-content" itemprop="name"><a href="#LayoutGrid3" title="Layanan" itemprop="url">Layanan</a></span><span class="wb-theme-content" itemprop="name"><a href="#LayoutGrid1" title="FAQ" itemprop="url">FAQ</a></span><span class="wb-theme-content" itemprop="name"><a href="#LayoutGrid4" title="Testimoni" itemprop="url">Testimoni</a></span>
 </div>
 </div>
 <div class="col-3">
@@ -84,9 +328,6 @@ $(document).ready(function()
 <div id="wb_navigationIcon3" style="display:inline-block;width:22px;height:38px;text-align:center;z-index:4;" class="wb-theme-content">
 <a href="./index.html"><div id="navigationIcon3"><i class="fa fa-brands fa-youtube"></i></div></a>
 </div>
-<div id="wb_navigationIcon4" style="display:inline-block;width:22px;height:38px;text-align:center;z-index:5;" class="wb-theme-content">
-<a href="./index.html"><div id="navigationIcon4"><i class="fa fa-brands fa-x-twitter"></i></div></a>
-</div>
 </div>
 </section>
 </div>
@@ -94,57 +335,159 @@ $(document).ready(function()
 <div id="homeLayoutGrid">
 <div class="row">
 <div class="col-1">
-<div id="wb_homeHeading" style="display:block;width:100%;z-index:6;">
-<h1 id="homeHeading" class="wb-theme-header">Percetakan UV Digital Printing dan Periklanan Digital Terbaik di Indonesia</h1>
+<div id="wb_homeHeading" style="display:block;width:100%;z-index:5;">
+<h1 id="homeHeading" class="wb-theme-header">Percetakan UV Digital Printing dan agen Iklan Digital Terbaik di Indonesia</h1>
 </div>
 <div id="wb_homeText" class="wb-theme-content">
-<p>Selamat datang di website kami, tempat yang tepat untuk mencari solusi percetakan UV digital printing dan periklanan digital. Kami menyediakan layanan percetakan yang inovatif dan berkualitas tinggi untuk memenuhi kebutuhan promosi dan branding Anda. Dengan teknologi canggih yang kami miliki, kami siap membantu Anda menciptakan produk cetakan yang menarik dan memukau. Temukan beragam layanan percetakan dan periklanan digital kami di sini!</p>
+<p>Selamat datang di website kami, tempat yang tepat untuk mencari solusi percetakan UV dan iklan digital untuk usaha anda. Kami menyediakan layanan percetakan yang inovatif dan berkualitas tinggi untuk memenuhi kebutuhan promosi dan branding Anda. Dengan teknologi canggih yang kami miliki, kami siap membantu Anda menciptakan produk cetakan yang menarik dan memukau. Temukan beragam layanan percetakan dan periklanan digital kami di sini!</p>
 </div>
-<div id="wb_homeButton1" style="display:inline-block;width:159px;height:36px;z-index:8;">
-<a class="ui-button ui-corner-all wb-theme-button" id="homeButton1" href="" style="width:100%;height:100%;">Primary button</a>
-</div>
-<div id="wb_homeButton2" style="display:inline-block;width:131px;height:36px;z-index:9;">
-<a class="ui-button ui-corner-all" id="homeButton2" href="" style="width:100%;height:100%;">Secondary</a>
-</div>
-<div id="wb_homeImage" style="display:block;width:100%;height:auto;z-index:10;">
-<img src="images/placeholder.png" id="homeImage" alt="" class="wb-theme-content" width="936" height="618">
+<button type="button" id="homeButton1" name="" value="Order sekarang" class="wb-theme-button" style="display:inline-block;width:195px;height:36px;z-index:7;">Order sekarang</button>
+<div id="wb_homeImage" style="display:block;width:100%;height:auto;z-index:8;">
+<img src="images/art1.jpg" id="homeImage" alt="" class="wb-theme-content" width="936" height="701">
 </div>
 </div>
 </div>
 </div>
 </div>
-<div id="wb_dividerLayoutGrid">
-<section id="dividerLayoutGrid">
+<div id="wb_produk-Aiyuvi">
+<section id="produk-Aiyuvi">
 <div class="row">
 <div class="col-1">
-<div id="wb_dividerHeading1" style="display:block;width:100%;z-index:11;">
-<h1 id="dividerHeading1">Contact</h1>
+<div id="wb_Heading3" style="display:block;width:100%;z-index:9;">
+<h1 id="Heading3">Produk</h1>
 </div>
-<div id="wb_dividerHeading2" style="display:block;width:100%;z-index:12;">
-<h2 id="dividerHeading2">Leave Us A Message</h2>
+<div id="wb_Heading4" style="display:block;width:100%;z-index:10;">
+<h2 id="Heading4">See What's in Store</h2>
 </div>
 </div>
 </div>
 </section>
 </div>
-<div id="wb_contactLayoutGrid" class="wb-theme-content">
-<div id="contactLayoutGrid">
-<div class="col-1">
-<input type="text" id="contactName" class="wb-theme-content" style="display:block;width: 100%;height:36px;z-index:13;" name="name" value="" spellcheck="false" placeholder="Name">
-<input type="text" id="contactEmail" class="wb-theme-content" style="display:block;width: 100%;height:36px;z-index:14;" name="email" value="" spellcheck="false" placeholder="Email">
-<input type="submit" id="contactButton" name="" value="SUBMIT" class="wb-theme-button" style="display:block;width: 100%;;height:39px;z-index:15;">
-</div>
-</div>
-</div>
-<div id="wb_LayoutGrid1">
-<section id="LayoutGrid1">
+<div id="wb_productsLayoutGrid" class="wb-theme-content">
+<div id="productsLayoutGrid">
 <div class="row">
 <div class="col-1">
-<div id="wb_Heading1" style="display:block;width:100%;z-index:16;">
-<h1 id="Heading1">Frequently Asked Questions</h1>
+<div id="wb_Card2" style="display:flex;width:100%;z-index:11;" class="card">
+<div id="Card2-card-body">
+<img id="Card2-card-item0" src="images/art1.jpg" width="350" height="262" alt="" title="">
+<div id="Card2-card-item1">Judul produk</div>
+<hr id="Card2-card-item2">
+<div id="Card2-card-item3">deskripsi produkdeskripsi produkdeskripsi produkdeskripsi produkdeskripsi produkdeskripsi produkdeskripsi produk</div>
 </div>
-<div id="wb_Heading2" style="display:block;width:100%;z-index:17;">
-<h2 id="Heading2">Get Informed with Our FAQs</h2>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Card3" style="display:flex;width:100%;z-index:12;" class="card">
+<div id="Card3-card-body">
+<img id="Card3-card-item0" src="images/art1.jpg" width="350" height="262" alt="" title="">
+<div id="Card3-card-item1">Judul produk</div>
+<hr id="Card3-card-item2">
+<div id="Card3-card-item3">deskripsi produkdeskripsi produkdeskripsi produkdeskripsi produkdeskripsi produkdeskripsi produkdeskripsi produk</div>
+</div>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Card1" style="display:flex;width:100%;z-index:13;" class="card">
+<div id="Card1-card-body">
+<img id="Card1-card-item0" src="images/art1.jpg" width="350" height="262" alt="" title="">
+<div id="Card1-card-item1">Judul produk</div>
+<hr id="Card1-card-item2">
+<div id="Card1-card-item3">deskripsi produkdeskripsi produkdeskripsi produkdeskripsi produkdeskripsi produkdeskripsi produkdeskripsi produk</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_layanan-Aiyuvi">
+<section id="layanan-Aiyuvi">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading5" style="display:block;width:100%;z-index:14;">
+<h1 id="Heading5">Layanan kami</h1>
+</div>
+<div id="wb_Heading6" style="display:block;width:100%;z-index:15;">
+<h2 id="Heading6">Kepuasan pelanggan adalah prioritas utama kami</h2>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div id="wb_LayoutGrid5">
+<div id="LayoutGrid5">
+<div class="row">
+<div class="col-1">
+<div id="wb_servicesCard4" style="display:flex;width:100%;z-index:16;" class="card wb-theme-content">
+<div id="servicesCard4-card-body">
+<div id="servicesCard4-card-item0" class="wb-theme-content"><i class="fa fa-people-group"></i></div>
+<div id="servicesCard4-card-item1" class="wb-theme-header"><h1>Staff</h1></div>
+<div id="servicesCard4-card-item2" class="wb-theme-header"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1></div>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_servicesCard5" style="display:flex;width:100%;z-index:17;" class="card wb-theme-content">
+<div id="servicesCard5-card-body">
+<div id="servicesCard5-card-item0" class="wb-theme-content"><i class="fa fa-sitemap"></i></div>
+<div id="servicesCard5-card-item1" class="wb-theme-header"><h1>JUDUL</h1></div>
+<div id="servicesCard5-card-item2" class="wb-theme-header"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1></div>
+</div>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_servicesCard6" style="display:flex;width:100%;z-index:18;" class="card wb-theme-content">
+<div id="servicesCard6-card-body">
+<div id="servicesCard6-card-item0" class="wb-theme-content"><i class="fa fa-circle-nodes"></i></div>
+<div id="servicesCard6-card-item1" class="wb-theme-header"><h1>JUDUL</h1></div>
+<div id="servicesCard6-card-item2" class="wb-theme-header"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid6">
+<div id="LayoutGrid6">
+<div class="row">
+<div class="col-1">
+<div id="wb_Card4" style="display:flex;width:100%;z-index:19;" class="card wb-theme-content">
+<div id="Card4-card-body">
+<div id="Card4-card-item0" class="wb-theme-content"><i class="fa fa-money-bill-trend-up"></i></div>
+<div id="Card4-card-item1" class="wb-theme-header"><h1>Harga Kompetitif</h1></div>
+<div id="Card4-card-item2" class="wb-theme-header"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1></div>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Card5" style="display:flex;width:100%;z-index:20;" class="card wb-theme-content">
+<div id="Card5-card-body">
+<div id="Card5-card-item0" class="wb-theme-content"><i class="fa fa-regular fa-calendar-check"></i></div>
+<div id="Card5-card-item1" class="wb-theme-header"><h1>JUDUL</h1></div>
+<div id="Card5-card-item2" class="wb-theme-header"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1></div>
+</div>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Card6" style="display:flex;width:100%;z-index:21;" class="card wb-theme-content">
+<div id="Card6-card-body">
+<div id="Card6-card-item0" class="wb-theme-content"><i class="fa fa-truck-fast"></i></div>
+<div id="Card6-card-item1" class="wb-theme-header"><h1>JUDUL</h1></div>
+<div id="Card6-card-item2" class="wb-theme-header"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_FAQ-Aiyuvi">
+<section id="FAQ-Aiyuvi">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading1" style="display:block;width:100%;z-index:22;">
+<h1 id="Heading1">FAQ</h1>
+</div>
+<div id="wb_Heading2" style="display:block;width:100%;z-index:23;">
+<h2 id="Heading2">Pertanyaan umum</h2>
 </div>
 </div>
 </div>
@@ -154,7 +497,7 @@ $(document).ready(function()
 <div id="faqLayoutGrid2">
 <div class="row">
 <div class="col-1">
-<div id="wb_faqAccordion" style="display:block;width:100%;z-index:21;">
+<div id="wb_faqAccordion" style="display:block;width:100%;z-index:28;">
 <div id="faqAccordion" class="accordion-group" role="tablist">
 <div class="accordion-item">
 <div class="accordion-header wb-theme-button" data-class="wb-theme-button" role="tab"><h4 class="accordion-title"><a class="collapsed" role="button" data-bs-toggle="collapse" href="#faqAccordion-collapse1" aria-controls="faqAccordion-collapse1" aria-expanded="false"><span class="accordion-arrow"><svg class="icon-default" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -163,7 +506,7 @@ $(document).ready(function()
 <svg class="icon-active" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg">
    <path d="M51 28 C51 29, 50 30, 50 31 L50 31 C49 31, 48 32, 47 32 L9 32 C8 32, 7 31, 6 31 C5 30, 5 29, 5 28 C5 27, 5 26, 6 25 C7 25, 8 25, 9 25 L47 25 C48 25, 49 25, 50 25 C50 26, 51 27, 51 28"/>
 </svg>
-</span>How to buy your product?</a></h4></div>
+</span>Tanya 1</a></h4></div>
 <div id="faqAccordion-collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" role="tabpanel">
 <div class="accordion-body wb-theme-content" data-class="wb-theme-content">
 <div id="wb_faqText1">
@@ -179,7 +522,7 @@ $(document).ready(function()
 <svg class="icon-active" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg">
    <path d="M51 28 C51 29, 50 30, 50 31 L50 31 C49 31, 48 32, 47 32 L9 32 C8 32, 7 31, 6 31 C5 30, 5 29, 5 28 C5 27, 5 26, 6 25 C7 25, 8 25, 9 25 L47 25 C48 25, 49 25, 50 25 C50 26, 51 27, 51 28"/>
 </svg>
-</span>Which payment methods do you accept? </a></h4></div>
+</span>Tanya 2</a></h4></div>
 <div id="faqAccordion-collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" role="tabpanel">
 <div class="accordion-body wb-theme-content" data-class="wb-theme-content">
 <div id="wb_faqText2">
@@ -195,10 +538,26 @@ $(document).ready(function()
 <svg class="icon-active" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg">
    <path d="M51 28 C51 29, 50 30, 50 31 L50 31 C49 31, 48 32, 47 32 L9 32 C8 32, 7 31, 6 31 C5 30, 5 29, 5 28 C5 27, 5 26, 6 25 C7 25, 8 25, 9 25 L47 25 C48 25, 49 25, 50 25 C50 26, 51 27, 51 28"/>
 </svg>
-</span>How long does it take before the product is shipped?</a></h4></div>
+</span>Tanya 3</a></h4></div>
 <div id="faqAccordion-collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" role="tabpanel">
 <div class="accordion-body wb-theme-content" data-class="wb-theme-content">
 <div id="wb_faqText3">
+<span style="color:#888888;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. </span>
+</div>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header wb-theme-button" data-class="wb-theme-button" role="tab"><h4 class="accordion-title"><a class="collapsed" role="button" data-bs-toggle="collapse" href="#faqAccordion-collapse4" aria-controls="faqAccordion-collapse4" aria-expanded="false"><span class="accordion-arrow"><svg class="icon-default" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <path d="M31 9 C31 8, 31 7, 30 6 L30 6 C30 6, 29 5, 28 5 C27 5, 26 6, 25 6 C25 7, 24 8, 24 9 L24 25 L9 25 C8 25, 7 25, 6 25 C5 26, 5 27, 5 28 C5 29, 5 30, 6 31 C7 31, 8 32, 9 32 L24 32 L24 47 C24 48, 25 49, 25 50 C26 50, 27 51, 28 51 C29 51, 30 50, 30 50 C31 49, 31 48, 31 47 L31 32 L47 32 C48 32, 49 31, 50 31 C50 30, 51 29, 51 28 C51 27, 50 26, 50 25 C49 25, 48 25, 47 25 L31 25 L31 9Z "/>
+</svg>
+<svg class="icon-active" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <path d="M51 28 C51 29, 50 30, 50 31 L50 31 C49 31, 48 32, 47 32 L9 32 C8 32, 7 31, 6 31 C5 30, 5 29, 5 28 C5 27, 5 26, 6 25 C7 25, 8 25, 9 25 L47 25 C48 25, 49 25, 50 25 C50 26, 51 27, 51 28"/>
+</svg>
+</span>Tanya 4</a></h4></div>
+<div id="faqAccordion-collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" role="tabpanel">
+<div class="accordion-body wb-theme-content" data-class="wb-theme-content">
+<div id="wb_Text1">
 <span style="color:#888888;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. </span>
 </div>
 </div>
@@ -211,171 +570,14 @@ $(document).ready(function()
 </div>
 </div>
 </div>
-<div id="wb_LayoutGrid2">
-<section id="LayoutGrid2">
+<div id="wb_Testimoni-aiyuvi">
+<section id="Testimoni-aiyuvi">
 <div class="row">
 <div class="col-1">
-<div id="wb_Heading3" style="display:block;width:100%;z-index:25;">
-<h1 id="Heading3">Products</h1>
+<div id="wb_Heading7" style="display:block;width:100%;z-index:29;">
+<h1 id="Heading7">Testimoni</h1>
 </div>
-<div id="wb_Heading4" style="display:block;width:100%;z-index:26;">
-<h2 id="Heading4">See What's in Store</h2>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div id="wb_productsLayoutGrid" class="wb-theme-content">
-<div id="productsLayoutGrid">
-<div class="row">
-<div class="col-1">
-<div id="wb_productsCard1" style="display:flex;width:100%;z-index:27;overflow:hidden" class="card wb-theme-content">
-<div id="productsCard1-card-body">
-<img id="productsCard1-card-item0" src="images/placeholder.png" class="wb-theme-content" width="800" height="528" alt="" title="">
-<div id="productsCard1-card-item1" class="wb-theme-button"><a href="https://www.wysiwygwebbuilder.com" title="Quick View"><i class="fa fa-search"></i>&nbsp;&nbsp;Quick View</a></div>
-<hr id="productsCard1-card-item2" class="wb-theme-header">
-<div id="productsCard1-card-item3" class="wb-theme-button"><a href="https://www.wysiwygwebbuilder.com" title="Add to cart"><i class="fa fa-shopping-bag"></i>&nbsp;&nbsp;Add to cart</a></div>
-<div id="productsCard1-card-item4" class="wb-theme-header"><h1>Product 1</h1></div>
-<div id="productsCard1-card-item5" class="wb-theme-header"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1></div>
-<div id="productsCard1-card-item6" class="wb-theme-header"><h1>$39.99</h1></div>
-</div>
-</div>
-</div>
-<div class="col-2">
-<div id="wb_productsCard2" style="display:flex;width:100%;z-index:28;overflow:hidden" class="card wb-theme-content">
-<div id="productsCard2-card-body">
-<img id="productsCard2-card-item0" src="images/placeholder.png" class="wb-theme-content" width="800" height="528" alt="" title="">
-<div id="productsCard2-card-item1" class="wb-theme-button"><a href="https://www.wysiwygwebbuilder.com" title="Quick View"><i class="fa fa-search"></i>&nbsp;&nbsp;Quick View</a></div>
-<hr id="productsCard2-card-item2" class="wb-theme-header">
-<div id="productsCard2-card-item3" class="wb-theme-button"><a href="https://www.wysiwygwebbuilder.com" title="Add to cart"><i class="fa fa-shopping-bag"></i>&nbsp;&nbsp;Add to cart</a></div>
-<div id="productsCard2-card-item4" class="wb-theme-header"><h1>Product 2</h1></div>
-<div id="productsCard2-card-item5" class="wb-theme-header"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1></div>
-<div id="productsCard2-card-item6" class="wb-theme-header"><h1>$39.99</h1></div>
-</div>
-</div>
-</div>
-<div class="col-3">
-<div id="wb_productsCard3" style="display:flex;width:100%;z-index:29;overflow:hidden" class="card wb-theme-content">
-<div id="productsCard3-card-body">
-<img id="productsCard3-card-item0" src="images/placeholder.png" class="wb-theme-content" width="800" height="528" alt="" title="">
-<div id="productsCard3-card-item1" class="wb-theme-button"><a href="https://www.wysiwygwebbuilder.com" title="Quick View"><i class="fa fa-search"></i>&nbsp;&nbsp;Quick View</a></div>
-<hr id="productsCard3-card-item2" class="wb-theme-header">
-<div id="productsCard3-card-item3" class="wb-theme-button"><a href="https://www.wysiwygwebbuilder.com" title="Add to cart"><i class="fa fa-shopping-bag"></i>&nbsp;&nbsp;Add to cart</a></div>
-<div id="productsCard3-card-item4" class="wb-theme-header"><h1>Product 3</h1></div>
-<div id="productsCard3-card-item5" class="wb-theme-header"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1></div>
-<div id="productsCard3-card-item6" class="wb-theme-header"><h1>$39.99</h1></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="wb_LayoutGrid3">
-<section id="LayoutGrid3">
-<div class="row">
-<div class="col-1">
-<div id="wb_Heading5" style="display:block;width:100%;z-index:30;">
-<h1 id="Heading5">Services</h1>
-</div>
-<div id="wb_Heading6" style="display:block;width:100%;z-index:31;">
-<h2 id="Heading6">Explore our exceptional range of services today!</h2>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div id="wb_servicesLayoutGrid1" class="wb-theme-content">
-<div id="servicesLayoutGrid1">
-<div class="row">
-<div class="col-1">
-<div class="col-1-padding">
-<div id="wb_servicesCard1" style="display:flex;width:100%;z-index:32;" class="card wb-theme-content">
-<div id="servicesCard1-card-body">
-<div id="servicesCard1-card-item0" class="wb-theme-content"><i class="fa fa-microchip"></i></div>
-<div id="servicesCard1-card-item1" class="wb-theme-header"><h1>Featured title</h1></div>
-<div id="servicesCard1-card-item2" class="wb-theme-header"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1></div>
-<div id="servicesCard1-card-item3" class="wb-theme-button">Call to action</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-2">
-<div class="col-2-padding">
-<div id="wb_servicesCard2" style="display:flex;width:100%;z-index:33;" class="card wb-theme-content">
-<div id="servicesCard2-card-body">
-<div id="servicesCard2-card-item0" class="wb-theme-content"><i class="fa fa-regular fa-circle-user"></i></div>
-<div id="servicesCard2-card-item1" class="wb-theme-header"><h1>Featured title</h1></div>
-<div id="servicesCard2-card-item2" class="wb-theme-header"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1></div>
-<div id="servicesCard2-card-item3" class="wb-theme-button">Call to action</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-3">
-<div class="col-3-padding">
-<div id="wb_servicesCard3" style="display:flex;width:100%;z-index:34;" class="card wb-theme-content">
-<div id="servicesCard3-card-body">
-<div id="servicesCard3-card-item0" class="wb-theme-content"><i class="fa fa-sliders"></i></div>
-<div id="servicesCard3-card-item1" class="wb-theme-header"><h1>Featured title</h1></div>
-<div id="servicesCard3-card-item2" class="wb-theme-header"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1></div>
-<div id="servicesCard3-card-item3" class="wb-theme-button">Call to action</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="wb_servicesLayoutGrid2" class="wb-theme-content">
-<div id="servicesLayoutGrid2">
-<div class="row">
-<div class="col-1">
-<div class="col-1-padding">
-<div id="wb_servicesCard4" style="display:flex;width:100%;z-index:35;" class="card wb-theme-content">
-<div id="servicesCard4-card-body">
-<div id="servicesCard4-card-item0" class="wb-theme-content"><i class="fa fa-computer"></i></div>
-<div id="servicesCard4-card-item1" class="wb-theme-header"><h1>Featured title</h1></div>
-<div id="servicesCard4-card-item2" class="wb-theme-header"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1></div>
-<div id="servicesCard4-card-item3" class="wb-theme-button">Call to action</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-2">
-<div class="col-2-padding">
-<div id="wb_servicesCard5" style="display:flex;width:100%;z-index:36;" class="card wb-theme-content">
-<div id="servicesCard5-card-body">
-<div id="servicesCard5-card-item0" class="wb-theme-content"><i class="fa fa-sitemap"></i></div>
-<div id="servicesCard5-card-item1" class="wb-theme-header"><h1>Featured title</h1></div>
-<div id="servicesCard5-card-item2" class="wb-theme-header"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1></div>
-<div id="servicesCard5-card-item3" class="wb-theme-button">Call to action</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-3">
-<div class="col-3-padding">
-<div id="wb_servicesCard6" style="display:flex;width:100%;z-index:37;" class="card wb-theme-content">
-<div id="servicesCard6-card-body">
-<div id="servicesCard6-card-item0" class="wb-theme-content"><i class="fa fa-circle-nodes"></i></div>
-<div id="servicesCard6-card-item1" class="wb-theme-header"><h1>Featured title</h1></div>
-<div id="servicesCard6-card-item2" class="wb-theme-header"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1></div>
-<div id="servicesCard6-card-item3" class="wb-theme-button">Call to action</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="wb_LayoutGrid4">
-<section id="LayoutGrid4">
-<div class="row">
-<div class="col-1">
-<div id="wb_Heading7" style="display:block;width:100%;z-index:38;">
-<h1 id="Heading7">Testimonials</h1>
-</div>
-<div id="wb_Heading8" style="display:block;width:100%;z-index:39;">
+<div id="wb_Heading8" style="display:block;width:100%;z-index:30;">
 <h2 id="Heading8">Hear from Our Satisfied Customers</h2>
 </div>
 </div>
@@ -392,55 +594,91 @@ $(document).ready(function()
 <li data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active"></li>
 <li data-bs-target="#testimonialsCarousel" data-bs-slide-to="1"></li>
 <li data-bs-target="#testimonialsCarousel" data-bs-slide-to="2"></li>
+<li data-bs-target="#testimonialsCarousel" data-bs-slide-to="3"></li>
+<li data-bs-target="#testimonialsCarousel" data-bs-slide-to="4"></li>
 </ol>
 <div class="carousel-inner">
 <div class="carousel-item active">
 <div class="carousel-item-inner">
-<div id="wb_testimonialsCard1" style="display:flex;width:calc(100% - 20px);z-index:40;" class="card">
+<div id="wb_testimonialsCard1" style="display:flex;width:calc(100% - 20px);z-index:31;" class="card">
 <div id="testimonialsCard1-card-body">
-<img id="testimonialsCard1-card-item0" src="images/avatar1_grey_small.png" width="128" height="128" alt="" title="">
-<div id="testimonialsCard1-card-item1">Jack Pott</div>
-<div id="testimonialsCard1-card-item2">Developer</div>
+<img id="testimonialsCard1-card-item0" src="images/ai__8F3W.png" width="256" height="256" alt="" title="">
+<div id="testimonialsCard1-card-item1">Ikke</div>
+<div id="testimonialsCard1-card-item2">Mahasiswi</div>
 <div id="testimonialsCard1-card-item3"><i class="fa fa-star"></i></div>
 <div id="testimonialsCard1-card-item4"><i class="fa fa-star"></i></div>
 <div id="testimonialsCard1-card-item5"><i class="fa fa-star"></i></div>
 <div id="testimonialsCard1-card-item6"><i class="fa fa-star"></i></div>
 <div id="testimonialsCard1-card-item7"><i class="fa fa-star"></i></div>
-<div id="testimonialsCard1-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+<div id="testimonialsCard1-card-item8">kualitasnya bagus. next order lagi</div>
 </div>
 </div>
 </div>
 </div>
 <div class="carousel-item">
 <div class="carousel-item-inner">
-<div id="wb_testimonialsCard2" style="display:flex;width:calc(100% - 20px);z-index:41;" class="card">
+<div id="wb_testimonialsCard2" style="display:flex;width:calc(100% - 20px);z-index:32;" class="card">
 <div id="testimonialsCard2-card-body">
-<img id="testimonialsCard2-card-item0" src="images/avatar2_grey_small.png" width="128" height="128" alt="" title="">
-<div id="testimonialsCard2-card-item1">Dee Zaster</div>
-<div id="testimonialsCard2-card-item2">Developer</div>
+<img id="testimonialsCard2-card-item0" src="images/ai__F04Q.png" width="256" height="256" alt="" title="">
+<div id="testimonialsCard2-card-item1">Yolanda</div>
+<div id="testimonialsCard2-card-item2">Arsitek</div>
 <div id="testimonialsCard2-card-item3"><i class="fa fa-star"></i></div>
 <div id="testimonialsCard2-card-item4"><i class="fa fa-star"></i></div>
 <div id="testimonialsCard2-card-item5"><i class="fa fa-star"></i></div>
 <div id="testimonialsCard2-card-item6"><i class="fa fa-star"></i></div>
-<div id="testimonialsCard2-card-item7"><i class="fa fa-star"></i></div>
-<div id="testimonialsCard2-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+<div id="testimonialsCard2-card-item7"><i class="fa fa-star-half-stroke"></i></div>
+<div id="testimonialsCard2-card-item8">Lumayan lengkap, kebetulan butuh print dadakan buat proposal</div>
 </div>
 </div>
 </div>
 </div>
 <div class="carousel-item">
 <div class="carousel-item-inner">
-<div id="wb_testimonialsCard3" style="display:flex;width:calc(100% - 20px);z-index:42;" class="card">
+<div id="wb_testimonialsCard3" style="display:flex;width:calc(100% - 20px);z-index:33;" class="card">
 <div id="testimonialsCard3-card-body">
-<img id="testimonialsCard3-card-item0" src="images/avatar3_grey_small.png" width="128" height="128" alt="" title="">
-<div id="testimonialsCard3-card-item1">Al B. Back</div>
-<div id="testimonialsCard3-card-item2">Developer</div>
+<img id="testimonialsCard3-card-item0" src="images/ai__CNM3.png" width="256" height="256" alt="" title="">
+<div id="testimonialsCard3-card-item1">Bambang Gen</div>
+<div id="testimonialsCard3-card-item2">Mahasiswa</div>
 <div id="testimonialsCard3-card-item3"><i class="fa fa-star"></i></div>
 <div id="testimonialsCard3-card-item4"><i class="fa fa-star"></i></div>
 <div id="testimonialsCard3-card-item5"><i class="fa fa-star"></i></div>
 <div id="testimonialsCard3-card-item6"><i class="fa fa-star"></i></div>
 <div id="testimonialsCard3-card-item7"><i class="fa fa-star"></i></div>
-<div id="testimonialsCard3-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+<div id="testimonialsCard3-card-item8">Stafnya ramah dan responsif. Saya pasti akan merekomendasikan kepada teman</div>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-item-inner">
+<div id="wb_Card7" style="display:flex;width:calc(100% - 20px);z-index:34;" class="card">
+<div id="Card7-card-body">
+<img id="Card7-card-item0" src="images/ai__S6MT.png" width="256" height="256" alt="" title="">
+<div id="Card7-card-item1">Sutoyo S.H</div>
+<div id="Card7-card-item2">Pengacara</div>
+<div id="Card7-card-item3"><i class="fa fa-star"></i></div>
+<div id="Card7-card-item4"><i class="fa fa-star"></i></div>
+<div id="Card7-card-item5"><i class="fa fa-star"></i></div>
+<div id="Card7-card-item6"><i class="fa fa-star"></i></div>
+<div id="Card7-card-item7"><i class="fa fa-star"></i></div>
+<div id="Card7-card-item8">Bagus, gercep... next kesini lagi</div>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-item-inner">
+<div id="wb_Card8" style="display:flex;width:calc(100% - 20px);z-index:35;" class="card">
+<div id="Card8-card-body">
+<img id="Card8-card-item0" src="images/ai__4SVK.png" width="256" height="256" alt="" title="">
+<div id="Card8-card-item1">Ibu Karti</div>
+<div id="Card8-card-item2">Rumah Tangga</div>
+<div id="Card8-card-item3"><i class="fa fa-star"></i></div>
+<div id="Card8-card-item4"><i class="fa fa-star"></i></div>
+<div id="Card8-card-item5"><i class="fa fa-star"></i></div>
+<div id="Card8-card-item6"><i class="fa fa-star"></i></div>
+<div id="Card8-card-item7"><i class="fa fa-star"></i></div>
+<div id="Card8-card-item8">deket rumah, jadi gak jauh2 kalau cari tempat cetak..</div>
 </div>
 </div>
 </div>
@@ -453,8 +691,8 @@ $(document).ready(function()
 </div>
 </div>
 </div>
-<div id="Layer1" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:46px;height:46px;z-index:96;">
-<div id="wb_Icon1" style="position:absolute;left:9px;top:9px;width:28px;height:28px;text-align:center;z-index:62;">
+<div id="Layer1" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:46px;height:46px;z-index:86;">
+<div id="wb_Icon1" style="position:absolute;left:9px;top:9px;width:28px;height:28px;text-align:center;z-index:54;">
 <a href="#"><div id="Icon1"><i class="fa fa-arrow-up"></i></div></a></div>
 </div>
 <div id="wb_footer">
@@ -464,37 +702,24 @@ $(document).ready(function()
 <div id="wb_footerTop">
 <div id="footerTop">
 <div class="col-1">
-<div id="wb_footerIcon1" style="display:inline-block;width:16px;height:17px;text-align:center;z-index:63;">
+<div id="wb_footerIcon1" style="display:inline-block;width:16px;height:17px;text-align:center;z-index:59;">
 <a href="./index.html"><div id="footerIcon1"><i class="fa fa-brands fa-x-twitter"></i></div></a>
 </div>
-<div id="wb_footerIcon2" style="display:inline-block;width:16px;height:17px;text-align:center;z-index:64;">
+<div id="wb_footerIcon2" style="display:inline-block;width:16px;height:17px;text-align:center;z-index:60;">
 <a href="./index.html"><div id="footerIcon2"><i class="fa fa-brands fa-instagram"></i></div></a>
 </div>
-<div id="wb_footerIcon3" style="display:inline-block;width:16px;height:17px;text-align:center;z-index:65;">
+<div id="wb_footerIcon3" style="display:inline-block;width:16px;height:17px;text-align:center;z-index:61;">
 <a href="./index.html"><div id="footerIcon3"><i class="fa fa-brands fa-facebook"></i></div></a>
 </div>
-<div id="wb_footerIcon4" style="display:inline-block;width:16px;height:17px;text-align:center;z-index:66;">
+<div id="wb_footerIcon4" style="display:inline-block;width:16px;height:17px;text-align:center;z-index:62;">
 <a href="./index.html"><div id="footerIcon4"><i class="fa fa-brands fa-linkedin"></i></div></a>
 </div>
-<div id="wb_footerIcon5" style="display:inline-block;width:16px;height:17px;text-align:center;z-index:67;">
+<div id="wb_footerIcon5" style="display:inline-block;width:16px;height:17px;text-align:center;z-index:63;">
 <a href="./index.html"><div id="footerIcon5"><i class="fa fa-brands fa-google"></i></div></a>
 </div>
-<div id="wb_footerIcon6" style="display:inline-block;width:16px;height:17px;text-align:center;z-index:68;">
+<div id="wb_footerIcon6" style="display:inline-block;width:16px;height:17px;text-align:center;z-index:64;">
 <a href="./index.html"><div id="footerIcon6"><i class="fa fa-brands fa-github"></i></div></a>
 </div>
-</div>
-</div>
-</div>
-<div id="wb_footerForm">
-<div id="footerForm">
-<div class="col-1">
-<label for="footerEditbox" id="footerLabel" style="display:block;width:100%;line-height:16px;z-index:69;">Sign up for our newsletter</label>
-</div>
-<div class="col-2">
-<input type="text" id="footerEditbox" style="display:block;width: 100%;height:35px;z-index:70;" name="email" value="" spellcheck="false" placeholder="Email address">
-</div>
-<div class="col-3">
-<input type="submit" id="footerButton" name="" value="SUBSCRIBE" style="display:inline-block;width:141px;height:35px;z-index:71;">
 </div>
 </div>
 </div>
@@ -510,7 +735,7 @@ $(document).ready(function()
 <div id="wb_footerLinks">
 <div id="footerLinks">
 <div class="col-1">
-<div id="wb_footerCard1" style="display:flex;width:100%;z-index:73;" class="card">
+<div id="wb_footerCard1" style="display:flex;width:100%;z-index:66;" class="card">
 <div id="footerCard1-card-body">
 <div id="footerCard1-card-item0">PRODUCTS</div>
 <div id="footerCard1-card-item1"><a href="./index.html">Angular</a></div>
@@ -521,7 +746,7 @@ $(document).ready(function()
 </div>
 </div>
 <div class="col-2">
-<div id="wb_footerCard2" style="display:flex;width:100%;z-index:74;" class="card">
+<div id="wb_footerCard2" style="display:flex;width:100%;z-index:67;" class="card">
 <div id="footerCard2-card-body">
 <div id="footerCard2-card-item0">USEFUL LINKS</div>
 <div id="footerCard2-card-item1"><a href="./index.html">Pricing</a></div>
@@ -532,7 +757,7 @@ $(document).ready(function()
 </div>
 </div>
 <div class="col-3">
-<div id="wb_footerCard3" style="display:flex;width:100%;z-index:75;" class="card">
+<div id="wb_footerCard3" style="display:flex;width:100%;z-index:68;" class="card">
 <div id="footerCard3-card-body">
 <div id="footerCard3-card-item0">COMPANY</div>
 <div id="footerCard3-card-item1"><a href="./index.html">Services</a></div>
@@ -543,7 +768,7 @@ $(document).ready(function()
 </div>
 </div>
 <div class="col-4">
-<div id="wb_footerCard4" style="display:flex;width:100%;z-index:76;" class="card">
+<div id="wb_footerCard4" style="display:flex;width:100%;z-index:69;" class="card">
 <div id="footerCard4-card-body">
 <div id="footerCard4-card-item0">SUPPORT</div>
 <div id="footerCard4-card-item1"><a href="./index.html">Tutorials</a></div>
@@ -559,7 +784,7 @@ $(document).ready(function()
 <div id="footerBottom">
 <div class="col-1">
 <div id="wb_footerCopyright">
-<span style="color:#FFFFFF;font-family:Arial;font-size:13px;">© Copyright 2024 WYSIWYG Web Builder</span>
+<span style="color:#FFFFFF;font-family:Arial;font-size:13px;">© Copyright 2024 AIYuvi.com</span>
 </div>
 </div>
 </div>
